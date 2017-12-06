@@ -7,8 +7,7 @@ import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 
 import { MyApp } from './app.component';
 import { ContactPage } from '../pages/contact/contact';
-import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
+import { HomePage, ListPage, InicioPage, RegistroPage, PruebaPage} from "../pages/index.pages";
 
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -19,6 +18,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     MyApp,
     HomePage,
     ListPage,
+    InicioPage,
+    RegistroPage,
+    PruebaPage,
     ContactPage
   ],
   imports: [
@@ -30,6 +32,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     MyApp,
     HomePage,
     ListPage,
+    InicioPage,
+    RegistroPage,
+    PruebaPage,
     ContactPage
   ],
   providers: [

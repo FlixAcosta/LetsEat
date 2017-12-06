@@ -3,37 +3,31 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Home</ion-title>
+    <ion-title>Inicio</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-    <h3>Home</h3>
-    
-      <p>
-        Disfruta nuestro menú del día.
-      </p>
     <ion-list>
-        <ion-item>
-          <ion-thumbnail item-start>
-            <img src="https://media.giphy.com/media/X2QBmjCQAHtle/giphy.gif">
-          </ion-thumbnail>
-          <h2>My Neighbor Totoro</h2>
-          <p>Hayao Miyazaki • 1988</p>
-          <button ion-button clear item-end>View</button>
-        </ion-item>
-      </ion-list>
-  
-
-  <button ion-button secondary menuToggle>Toggle Menu</button>
-  <button ion-button (click)="scan()">Scan ... </button>
-  <div *ngIf="scanData">
-      <p>Scanned Text : {{this.scanData}}</p>
-      <p>Scanned Format : </p>
-
-  </div>
-  <ion-input type="text" [(ngModel)]="encodeData" ></ion-input>   
-  <button ion-button (click)="encodeText()">Encode Text</button>  
+        
+          <ion-item>
+            <ion-label fixed>Username</ion-label>
+            <ion-input type="text" value=""></ion-input>
+          </ion-item>
+        
+          <ion-item>
+            <ion-label fixed>Password</ion-label>
+            <ion-input type="password"></ion-input>
+          </ion-item>
+          <div padding>
+              <button ion-button block (tap) = "irAinicio()">Iniciar sesión</button>
+              <button ion-button block (tap) ="irAregistro()">Registrarse</button>
+          </div>
+          
+        
+        </ion-list>
+        
+    
   
 </ion-content>
 

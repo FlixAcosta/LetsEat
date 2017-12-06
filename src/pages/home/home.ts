@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { BarcodeScanner ,BarcodeScannerOptions } from '@ionic-native/barcode-scanner';
 
+import { PruebaPage, RegistroPage } from "../index.pages"
 
 @Component({
   selector: 'page-home',
@@ -9,38 +9,20 @@ import { BarcodeScanner ,BarcodeScannerOptions } from '@ionic-native/barcode-sca
 })
 export class HomePage {
 
-  scanData : {};
-  options :BarcodeScannerOptions;
-  encodeData : string ;
-  encodedData : {} ;
+  
   
 
-  constructor(public navCtrl: NavController ,private barcodeScanner: BarcodeScanner) {
+  constructor(public navCtrl: NavController) {
 
          
 } 
-scan(){
-  this.options = {
-      prompt : "Escanea tu código "
+
+
+irAregistro(){
+    this.navCtrl.push(RegistroPage);
   }
-  this.barcodeScanner.scan(this.options).then((barcodeData) => {
-
-      console.log(barcodeData);
-      this.scanData = barcodeData;
-  }, (err) => {
-      console.log("Error occured : " + err);
-  });     
-
-}
-encodeText(){
-  this.barcodeScanner.encode(this.barcodeScanner.Encode.TEXT_TYPE,this.encodeData).then((encodedData) => {
-
-      console.log(encodedData);
-      this.encodedData = encodedData;
-
-  }, (err) => {
-      console.log("Error occured : " + err);
-  });                 
-}   
+  irAinicio(){
+    this.navCtrl.push(PruebaPage);
+  }
 
 }

@@ -1,0 +1,37 @@
+<!--
+  Generated template for the PruebaPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>prueba</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+    <p>
+        Escanea tu código de estacionamiento
+      </p>
+     
+
+  
+  <button ion-button (click)="scan()">Scan ... </button>
+  <div *ngIf="scanData">
+      <p>Scanned Text : {{this.scanData}}</p>
+      <p>Scanned Format : </p>
+
+  </div>
+  <ion-input type="text" [(ngModel)]="encodeData" ></ion-input>   
+  <button ion-button (click)="encodeText()">Encode Text</button> 
+  
+  
+ 
+    <a href ="https://FlixAcosta.github.io/mobile-performance">VER AR</a>
+
+</ion-content>
